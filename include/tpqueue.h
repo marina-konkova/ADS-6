@@ -1,16 +1,15 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
+#include <cassert>
 
 template<typename T, int size>
 class TPQueue {
-
 private:
     T* items;
     int max_size;
     int head, tail;
     int count;
-
 public:
     TPQueue(): max_size(size), head(0), tail(0), count(0) {
         items = new T[max_size + 1];

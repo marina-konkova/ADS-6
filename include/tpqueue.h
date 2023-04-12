@@ -4,11 +4,13 @@
 
 template<typename T, int size>
 class TPQueue {
+
 private:
     T* items;
     int max_size;
     int head, tail;
     int count;
+
 public:
     TPQueue(): max_size(size), head(0), tail(0), count(0) {
         items = new T[max_size + 1];
@@ -20,7 +22,7 @@ public:
         } else {
             int i = tail - 1;
             bool flag = false;
-            while (i >= head && item.priority > items[i].priority) {
+            while (i >= head && item.prior > items[i].prior) {
                 flag = true;
                 items[i + 1] = items[i];
                 items[i] = item;

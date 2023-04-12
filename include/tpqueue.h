@@ -10,6 +10,7 @@ class TPQueue {
     int max_size;
     int head, tail;
     int count;
+ 
  public:
     TPQueue(): max_size(size), head(0), tail(0), count(0) {
         items = new T[max_size + 1];
